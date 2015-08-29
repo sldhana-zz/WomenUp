@@ -1,18 +1,70 @@
  {% extends 'base.html' %}
-<<<<<<< HEAD
-    {% block title %} Welcome to Next2U {% endblock %}
-    {% block content %}
 
-        <div class="container">
-            <div class="row"></div>
+    {% block title %} Welcome to Next2U {% endblock %}
+
+
+
+
+
+
+
+    {% block content %}
+   <div class="container" id="main-container">
+
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h1>Are you an agency?</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="panel-footer">
+                                    <ul class="options">
+                                        <li>Get volunteers quickly</li>
+                                        <li>Avoid overhead cost of setting up your own system</li>
+                                        <li>Help more abused women</li>
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <br /><br /><br />
+
+                                        <a href="/signin" class="btn btn-lg btn-danger">Sign In</a>
+                                        <a href="/agency-registration" class="btn btn-warning">Register</a>
+
+                                </div>
+
+                        </div>
+                    </div>
+                 <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h1>Are you an mentor?</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="panel-footer">
+                                    <ul class="options">
+                                        <li>Help abused women recover</li>
+                                        <li>Give back to society</li>
+                                        <li>Find agencies that need your expertise</li>
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <br /><br /><br />
+                                    <a href="signin" class="btn btn-lg btn-danger">Sign In</a>
+                                    <a href="/mentor-registration" class="btn btn-warning">Register</a>
+                                </div>
+
+                        </div>
+                    </div>
+            </div>
         </div>
-=======
-
-
-    {% block title %} Welcome to Next2U {% endblock %}
-
-    {% block content %}
-        <h1> A safe place for U </h1>
->>>>>>> baf0754e4fc496fb22fdef5eba9175281b5e57dc
 
     {% endblock %}
