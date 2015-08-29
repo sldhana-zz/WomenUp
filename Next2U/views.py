@@ -1,5 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from Next2U.models import Supporter
+
 import sqlite3
 
 # Create your views here.
@@ -19,3 +21,10 @@ def agencypost(request):
     conn.commit()
     conn.close()
     return render(request, 'Next2U/index.html')
+
+def agency_search(request):
+        # get the blog posts that are published
+        supporters = Supporter.objects.filter(approved='True')
+        # now return the rendered template
+        return render(request, 'Next2U/agencysearch.html')
+
