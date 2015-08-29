@@ -70,9 +70,6 @@ def mentorRegistrationPost(request):
     })
 
 def agencySearch(request):
-        import ipdb
-        ipdb.set_trace()
-
         # get the blog posts that are published
         supporters = Supporter.objects.all().select_related
         agencyid = 1
@@ -101,9 +98,6 @@ def saveService(request):
     SupporterService.save()
 
 def postView(request):
-    import ipdb
-    ipdb.set_trace()
-
     agencyid=request.GET.get('Agency')
     mentorSupportSaved=AgencySupporterApproval(
         Agency = Agency.objects.get(id=agencyid),
