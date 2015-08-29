@@ -41,6 +41,8 @@ def agencyRegistrationPost(request):
         Email = request.POST.get("Email"))
 
     agencySaved.save()
+    supporters = Supporter.objects.all()
+    # now return the rendered template    
     return HttpResponsePermanentRedirect("/agencySearch")
 
 
@@ -76,4 +78,4 @@ def loginPost(request):
         return HttpResponsePermanentRedirect("/agencySearch")
     else:
         supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
-
+        return render(request, 'Next2U/mentorCreation.html')
