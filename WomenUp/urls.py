@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^mentorRegistration/$', 'Next2U.views.mentorRegistrationDisplay'),
     url(r'^agencyRegistrationPost', 'Next2U.views.agencyRegistrationPost'),
     url(r'^agencySearch', 'Next2U.views.agencySearch'),
+    url(r'^mentorRegistrationPost', 'Next2U.views.mentorRegistrationPost'),
 ]
