@@ -3,7 +3,9 @@
 {% block title %} We need your skills {% endblock %}
 
 {% block content %}
-    <h1>Select Your Specialty</h1>
+    <div class="page-header">
+        <h1>What is your specialty?</h1>
+    </div>
 
     {% csrf_token %}
     <div class="container" id="main-container">
@@ -12,7 +14,7 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1>Legal</h1>
+                            <h3><a href="">Legal</a></h3>
                         </div>
                     </div>
                 </div>
@@ -30,11 +32,11 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="panel panel-primary">
+            <div class="panel panel-success">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1>Child care</h1>
+                            <h3><a href="">Child care</a></h3>
                         </div>
                     </div>
                 </div>
@@ -51,11 +53,11 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="panel panel-danger">
+            <div class="panel panel-success">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1>Place to stay</h1>
+                            <h3><a href="">Place to stay</a></h3>
                         </div>
                     </div>
                 </div>
@@ -73,11 +75,11 @@
         </div>
 
         <div class="col-md-6">
-            <div class="panel panel-warning">
+            <div class="panel panel-success">
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <h1>Personal Development</h1>
+                            <h3><a href="">Personal Development</a></h3>
                         </div>
                     </div>
                 </div>
@@ -86,15 +88,18 @@
                     <ul class="options">
                         <li>Help an abused woman get a job</li>
                         <li>Give them tips on how to be independent</li>
-                        <li></li>
                     </ul>
                     <div class="clearfix"></div>
                 </div>
 
             </div>
         </div>
-
     </div>
+
+    <script>
+
+
+    </script>
 
 {% endblock %}
 
