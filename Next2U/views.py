@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, render_to_response
 
 from Next2U.models import Agency, Supporter
 
@@ -65,7 +65,7 @@ def agencySearch(request):
         # get the blog posts that are published
         supporters = Supporter.objects.filter()
         # now return the rendered template
-        return render(request, 'Next2U/agencysearch.html')
+        return render_to_response('Next2U/agencysearch.html', supporters)
 
 def loginPost(request):
     if (request.POST.get("type") == "agency"):
@@ -74,6 +74,6 @@ def loginPost(request):
         #alert
 
     else:
-        supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
-
+        #supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
+        return render(request, 'Next2U/mentorCreation.html')
 
