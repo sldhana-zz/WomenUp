@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import render, render_to_response
 
-from Next2U.models import Agency, Supporter
+from Next2U.models import Agency, Supporter, SupporterService, Service
 
 import sqlite3
 
@@ -85,3 +85,17 @@ def loginPost(request):
     else:
         supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
         return render(request, 'Next2U/mentorCreation.html')
+
+def saveService(request):
+
+    import ipdb
+    ipdb.set_trace()
+
+    supporter = Supporter.objects.filter(id=request.POST.get('Supporter'))
+    service = Service.objects.filter(ServiceName=request.POST.get('Service'))
+
+    supporterServiceSaved=SupporterService(
+        Service = service,
+        Supporter = supporter)
+
+    SupporterService.save()

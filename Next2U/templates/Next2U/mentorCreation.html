@@ -14,7 +14,8 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="/saveService" method="post">
+                            <form action="/saveService/" method="post">
+                                {% csrf_token %}
                                 <input type="hidden" name="Service" value="Legal" />
                                 <input type="hidden" name="Supporter" value="{{ supporter }}" />
                             <h3><button class="btn btn-success">Legal</button></h3>
@@ -40,8 +41,9 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="/saveService" method="post">
-                                <input type="hidden" name="Service" value="Childcare" />
+                            <form action="/saveService/" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="Service" value="Child Care" />
                                 <input type="hidden" name="Supporter" value="{{ supporter }}" />
                             <h3><button class="btn btn-success">Child care</button></h3>
                             </form>
@@ -65,10 +67,11 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="/saveService" method="post">
-                                <input type="hidden" name="Service" value="Place to stay" />
+                            <form action="/saveService/" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="Service" value="Safe Home" />
                                 <input type="hidden" name="Supporter" value="{{ supporter }}" />
-                            <h3><button class="btn btn-success">Place to stay</button></h3>
+                            <h3><button class="btn btn-success">Safe Home</button></h3>
                             </form>
                         </div>
                     </div>
@@ -91,7 +94,8 @@
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-xs-12">
-                            <form action="/saveService" method="post">
+                            <form action="/saveService/" method="post">
+                                {% csrf_token %}
                                 <input type="hidden" name="Service" value="Personal Development" />
                                 <input type="hidden" name="Supporter" value="{{ supporter }}" />
                             <h3><button class="btn btn-success">Personal Development</button></h3>

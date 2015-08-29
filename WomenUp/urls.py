@@ -31,4 +31,5 @@ urlpatterns = [
     url(r'^signin/$', 'Next2U.views.signinDisplay'),
     url(r'^loginPost$', 'Next2U.views.loginPost'),
     url(r'^mentorCreation/$', 'Next2U.views.mentorCreationDisplay'),
+    url(r'^saveService/$', 'Next2U.views.saveService'),
 ]
