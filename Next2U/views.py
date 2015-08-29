@@ -91,19 +91,17 @@ def loginPost(request):
         return render(request, 'Next2U/mentorCreation.html')
 
 def saveService(request):
-    supporter = Supporter.objects.filter(id=request.POST.get('Supporter'))
-    service = Service.objects.filter(ServiceName=request.POST.get('Service'))
+    supporter = Supporter.objects.get(id=request.POST.get('Supporter'))
+    service = Service.objects.get(ServiceName=request.POST.get('Service'))
 
     supporterServiceSaved=SupporterService(
         Service = service,
         Supporter = supporter)
 
-    SupporterService.save()
+    supporterServiceSaved.save()
+    return render(request, 'Next2U/selectionSuccess.html')
 
 def postView(request):
-    import ipdb
-    ipdb.set_trace()
-
     agencyid=request.GET.get('Agency')
     mentorSupportSaved=AgencySupporterApproval(
         Agency = Agency.objects.get(id=agencyid),
