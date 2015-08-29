@@ -15,6 +15,12 @@ def agencyRegistrationDisplay(request):
 def mentorRegistrationDisplay(request):
     return render(request, 'Next2U/mentor.html')
 
+def mentorSuccessDisplay(request):
+    return render(request, 'Next2U/mentorSuccess.html')
+
+def signinDisplay(request):
+    return render(request, 'Next2U/signin.html')
+
 def agencyRegistrationPost(request):
     agencySaved=Agency(
     Name = request.POST.get("Name"),
