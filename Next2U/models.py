@@ -5,6 +5,8 @@ from django.db import models
 # Supporter
 
 class Supporter(models.Model):
+    Username = models.CharField(max_length=50)
+    Password = models.CharField(max_length=50)
     FirstName = models.CharField(max_length=50)
     LastName = models.CharField(max_length=50)
     Address1 = models.CharField(max_length=50)
@@ -18,6 +20,8 @@ class Supporter(models.Model):
 
 # Agency
 class Agency(models.Model):
+    Username = models.CharField(max_length=50)
+    Password = models.CharField(max_length=50)
     Name = models.CharField(max_length=50)
     ContactName = models.CharField(max_length=50)
     TINNumber = models.CharField(max_length=50)
