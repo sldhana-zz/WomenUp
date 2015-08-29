@@ -33,7 +33,7 @@ def agencyRegistrationPost(request):
 
 def agency_search(request):
         # get the blog posts that are published
-        supporters = Supporter.objects.filter(approved='True')
+        supporters = Supporter.objects.filter()
         # now return the rendered template
         return render(request, 'Next2U/agencysearch.html')
 
