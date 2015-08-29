@@ -6,3 +6,6 @@ def index(request):
 
 def agency_registration(request):
     return render(request, 'Next2U/agency.html')
+
+def mentor_registration(request):
+    return render(request, 'Next2U/mentor.html')
