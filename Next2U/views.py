@@ -22,7 +22,10 @@ def signinDisplay(request):
     return render(request, 'Next2U/signin.html')
 
 def mentorCreationDisplay(request):
-    return render(request, 'Next2U/mentorCreation.html')
+    supporter = request.GET.get('id')
+    return render(request, 'Next2U/mentorCreation.html', {
+        'supporter': supporter
+    })
 
 
 def agencyRegistrationPost(request):
@@ -61,7 +64,9 @@ def mentorRegistrationPost(request):
         Email = request.POST.get("Email"))
 
     mentorSaved.save()
-    return render(request, 'Next2U/mentorSuccess.html')
+    return render(request, 'Next2U/mentorSuccess.html', {
+        'Supporter': mentorSaved.id
+    })
 
 def agencySearch(request):
         # get the blog posts that are published
