@@ -65,5 +65,11 @@ def agencysearch(request):
 
 def loginPost(request):
     if (request.POST.get("type") == "agency"):
-        agency = Agency.objects.filter()
+        agency = Agency.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
+        #if (agency is None)
+        #alert
+
+    else:
+        supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
+
 
