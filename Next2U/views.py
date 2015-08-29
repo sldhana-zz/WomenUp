@@ -41,7 +41,7 @@ def agencyRegistrationPost(request):
         Email = request.POST.get("Email"))
 
     agencySaved.save()
-    return render(request, 'Next2U/agency.html')
+    return render(request, 'Next2U/agencysearch.html')
 
 
 def mentorRegistrationPost(request):
