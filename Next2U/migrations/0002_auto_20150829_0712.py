@@ -32,7 +32,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='supporter',
             name='Username',
-            field=models.CharField(max_length=50, default='Helper2'),
+            field=models.CharField(max_length=50, default='Mentor2'),
             preserve_default=False,
         ),
     ]
