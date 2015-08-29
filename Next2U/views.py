@@ -70,9 +70,6 @@ def mentorRegistrationPost(request):
     })
 
 def agencySearch(request):
-        import ipdb
-        ipdb.set_trace()
-
         # get the blog posts that are published
         supporters = Supporter.objects.all().select_related
         agencyid = 1
