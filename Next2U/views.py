@@ -63,9 +63,9 @@ def mentorRegistrationPost(request):
 
 def agencySearch(request):
         # get the blog posts that are published
-        supporters = Supporter.objects.filter()
+        supporters = Supporter.objects.all()
         # now return the rendered template
-        return render(request, 'Next2U/agencysearch.html')
+        return render(request, 'Next2U/agencysearch.html', {'supporters':supporters})
 
 def loginPost(request):
     if (request.POST.get("type") == "agency"):
