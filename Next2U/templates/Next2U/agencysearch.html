@@ -25,6 +25,7 @@
                     <th>Address</th>
                     <th>Phone</th>
                     <th>Email</th>
+                    <th>Services offered</th>
                     <th>Choose</th>
                 </tr>
                 {% for supporter in supporters %}
@@ -43,6 +44,9 @@
 
                         <td>
                             {{supporter.Email}}
+                        </td>
+                        <td>
+                                {{supporter.Service.ServiceName}}
                         </td>
                         <td>
                             <input type="checkbox" onclick="OnChangeCheckbox(this)" value={{supporter.id}} name="ckhSupporter">
