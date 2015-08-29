@@ -53,6 +53,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'WomenUp.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -68,6 +69,8 @@ TEMPLATES = [
         },
     },
 ]
+
+TEMPLATES_DIR = ('WomenUp/Next2U/templates',)
 
 WSGI_APPLICATION = 'WomenUp.wsgi.application'
 
