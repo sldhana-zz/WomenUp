@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import render, render_to_response
 
-from Next2U.models import Agency, Supporter, SupporterService, Service
+from Next2U.models import Agency, Supporter, SupporterService, Service, AgencySupporterApproval
 
 import sqlite3
 
@@ -45,8 +45,9 @@ def agencyRegistrationPost(request):
 
     agencySaved.save()
     supporters = Supporter.objects.all()
+    agencyid = agencySaved.id
     # now return the rendered template    
-    return HttpResponsePermanentRedirect("/agencySearch")
+    return render(request, 'Next2U/agencysearch.html', {'supporters':supporters, 'Agency':agencyid})
 
 
 def mentorRegistrationPost(request):
@@ -88,9 +89,6 @@ def loginPost(request):
 
 def saveService(request):
 
-    import ipdb
-    ipdb.set_trace()
-
     supporter = Supporter.objects.filter(id=request.POST.get('Supporter'))
     service = Service.objects.filter(ServiceName=request.POST.get('Service'))
 
@@ -99,3 +97,18 @@ def saveService(request):
         Supporter = supporter)
 
     SupporterService.save()
+
+def postView(request):
+    import ipdb
+    ipdb.set_trace()
+
+    agencyid=request.GET.get('Agency')
+    mentorSupportSaved=AgencySupporterApproval(
+        Agency = Agency.objects.get(id=agencyid),
+        Supporter = Supporter.objects.get(id=request.GET.get('supporterid'))
+    )
+    if (request.GET.get('checkflag')):
+        mentorSupportSaved.save()
+
+    supporters = Supporter.objects.all().select_related
+    return render(request, 'Next2U/agencysearch.html', {'supporters':supporters, 'Agency':agencyid})

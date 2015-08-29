@@ -8,12 +8,8 @@
     <head>
     <script type="text/javascript">
         function OnChangeCheckbox (checkbox) {
-            if (checkbox.checked) {
-                alert ("The check box is checked.");
-            }
-            else {
-                alert ("The check box is not checked.");
-            }
+            $.get( "/postView/", { supporterid:checkbox.value, checkflag:checkbox.checked, Agency:{{ Agency }}} );
+
         }
     </script>
     </head>
@@ -49,7 +45,7 @@
                                 {{supporter.Service.ServiceName}}
                         </td>
                         <td>
-                            <input type="checkbox" onclick="OnChangeCheckbox(this)" value={{supporter.id}} name="ckhSupporter">
+                            <input type="checkbox" onchange="OnChangeCheckbox(this)" value={{supporter.id}} name="ckhSupporter">
                         </td>
 
                     </tr>
