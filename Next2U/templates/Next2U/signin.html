@@ -5,8 +5,8 @@
 {% block content %}
 
 
-    <form method="post" action="/login/">
-         {% csrf_token %}
+    <form method="post" action="/loginPost">
+    {% csrf_token %}
         <div class="container">
             <div class="row">
                 <div class="page-header">
@@ -30,7 +30,7 @@
             </div>
 
         </div>
-
+        <input type="hidden" name="type" value="agency" />
     </form>
 
 {% endblock %}
