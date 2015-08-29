@@ -4,7 +4,7 @@
     {% block title %} Avialable Mentor {% endblock %}
      
     {% block content %}
-        <h1> Search for Mentor </h1>
+        <h1>Mentor Assignation</h1>
     <head>
     <script type="text/javascript">
         function OnChangeCheckbox (checkbox) {
@@ -18,30 +18,25 @@
     </script>
     </head>
          <div class="post">
-            <table>
+            <table  class="table table-striped">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <th>Choose</th>
+
+                </tr>
                 {% for supporter in supporters %}
                     <tr>
                         <td>
-                            {{supporter.FirstName}}
+                            {{supporter.FirstName}}  {{supporter.LastName}}
                         </td>
+
                         <td>
-                            {{supporter.LastName}}
+                            {{supporter.Address1}} {{supporter.City}} {{supporter.State}} {{supporter.ZIP}}
                         </td>
-                        <td>
-                            {{supporter.Address1}}
-                        </td>
-                        <td>
-                            {{supporter.Address2}}
-                        </td>
-                        <td>
-                            {{supporter.City}}
-                        </td>
-                        <td>
-                            {{supporter.State}}
-                        </td>
-                        <td>
-                            {{supporter.ZIP}}
-                        </td>
+
                         <td>
                             {{supporter.Phone}}
                         </td>
