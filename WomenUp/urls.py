@@ -29,4 +29,5 @@ urlpatterns = [
     url(r'^mentorRegistrationPost', 'Next2U.views.mentorRegistrationPost'),
     url(r'^mentorSuccess/$', 'Next2U.views.mentorSuccessDisplay'),
     url(r'^signin/$', 'Next2U.views.signinDisplay'),
+    url(r'^login/$', 'Next2U.views.loginPost'),
 ]
