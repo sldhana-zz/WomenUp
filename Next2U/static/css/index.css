@@ -2,10 +2,12 @@
 .logo{
     margin-top: 10px;
     padding-bottom: 10px;
+    color: #eb9316;
 }
 
-.navbar{
+.navbar {
     border-bottom: 1px solid #eee;
+    color: #eb9316;
 }
 
 .logo-two{
