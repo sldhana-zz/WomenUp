@@ -22,7 +22,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'Next2U.views.index'),
 
-    url(r'^agency-registration/$', 'Next2U.views.agency_registration'),
-    url(r'^mentor-registration/$', 'Next2U.views.mentor_registration'),
-    url(r'^agencypost$', 'Next2U.views.agencypost'),
+    url(r'^agencyRegistration/$', 'Next2U.views.agencyRegistrationDisplay'),
+    url(r'^mentorRegistration/$', 'Next2U.views.mentorRegistrationDisplay'),
+    url(r'^agencyRegistrationPost', 'Next2U.views.agencyRegistrationPost'),
 ]
