@@ -1,9 +1,70 @@
  {% extends 'base.html' %}
 
+    {% block title %} Welcome to Next2U {% endblock %}
 
-    {% block title %} Blog Archive {% endblock %}
+
+
+
+
+
 
     {% block content %}
-        <h1> My Blog Archive </h1>
+   <div class="container" id="main-container">
+
+            <div class="row">
+                <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h1>Are you an agency?</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="panel-footer">
+                                    <ul class="options">
+                                        <li>Get volunteers quickly</li>
+                                        <li>Avoid overhead cost of setting up your own system</li>
+                                        <li>Help more abused women</li>
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <br /><br /><br />
+
+                                        <a href="/signin" class="btn btn-lg btn-danger">Sign In</a>
+                                        <a href="/agencyRegistration" class="btn btn-warning">Register</a>
+
+                                </div>
+
+                        </div>
+                    </div>
+                 <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <h1>Are you an mentor?</h1>
+                                    </div>
+                                </div>
+                            </div>
+
+                                <div class="panel-footer">
+                                    <ul class="options">
+                                        <li>Help abused women recover</li>
+                                        <li>Give back to society</li>
+                                        <li>Find agencies that need your expertise</li>
+
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                    <br /><br /><br />
+                                    <a href="signin" class="btn btn-lg btn-danger">Sign In</a>
+                                    <a href="/mentorRegistration" class="btn btn-warning">Register</a>
+                                </div>
+
+                        </div>
+                    </div>
+            </div>
+        </div>
 
     {% endblock %}
