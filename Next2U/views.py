@@ -41,7 +41,10 @@ def agencyRegistrationPost(request):
         Email = request.POST.get("Email"))
 
     agencySaved.save()
-    return render(request, 'Next2U/agencysearch.html')
+    #return render(request, 'Next2U/agencysearch.html')
+    supporters = Supporter.objects.all()
+    # now return the rendered template
+    return render(request, 'Next2U/agencysearch.html', {'supporters':supporters})
 
 
 def mentorRegistrationPost(request):
