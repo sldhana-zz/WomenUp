@@ -4,6 +4,8 @@
 
 {% block content %}
     <h1>Signup Your Agency </h1>
+    <form method="post" action="/agencypost">
+    {% csrf_token %}
     <div class="form-group">
         <label for="name">Agency Name</label>
         <input type="text" class="form-control" id="name" name="Name">
