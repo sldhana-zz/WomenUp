@@ -53,7 +53,7 @@ def mentorRegistrationPost(request):
     mentorSaved.save()
     return render(request, 'Next2U/mentor.html')
 
-def agency_search(request):
+def agencySearch(request):
         # get the blog posts that are published
         supporters = Supporter.objects.filter()
         # now return the rendered template
