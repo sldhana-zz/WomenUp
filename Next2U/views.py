@@ -1,8 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from Next2U.models import Supporter
 
-from Next2U.models import Agency
+from Next2U.models import Agency, Supporter
+
 import sqlite3
 
 # Create your views here.
@@ -31,6 +31,7 @@ def agencyRegistrationPost(request):
     agencySaved.save()
     return render(request, 'Next2U/agency.html')
 
+
 def mentorRegistrationPost(request):
     mentorSaved=Supporter(
     FirstName = request.POST.get("FirstName"),
@@ -46,9 +47,10 @@ def mentorRegistrationPost(request):
     mentorSaved.save()
     return render(request, 'Next2U/mentor.html')
 
-def agencySearch(request):
+def agency_search(request):
         # get the blog posts that are published
         supporters = Supporter.objects.filter()
         # now return the rendered template
         return render(request, 'Next2U/agencysearch.html')
+
 
