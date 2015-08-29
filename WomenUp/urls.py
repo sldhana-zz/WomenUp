@@ -21,4 +21,8 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'Next2U.views.index'),
+
+    url(r'^agency-registration/$', 'Next2U.views.agency_registration'),
+    url(r'^mentor-registration/$', 'Next2U.views.mentor_registration'),
+    url(r'^agencypost$', 'Next2U.views.agencypost'),
 ]
