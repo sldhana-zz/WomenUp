@@ -43,8 +43,9 @@ def agencyRegistrationPost(request):
     agencySaved.save()
     #return render(request, 'Next2U/agencysearch.html')
     supporters = Supporter.objects.all()
+    agencyid = agencySaved.id
     # now return the rendered template
-    return render(request, 'Next2U/agencysearch.html', {'supporters':supporters})
+    return render(request, 'Next2U/agencysearch.html', {'supporters':supporters , 'Agency':agencyid})
 
 
 def mentorRegistrationPost(request):
@@ -67,8 +68,9 @@ def mentorRegistrationPost(request):
 def agencySearch(request):
         # get the blog posts that are published
         supporters = Supporter.objects.all()
+        agencyid = 1
         # now return the rendered template
-        return render(request, 'Next2U/agencysearch.html', {'supporters':supporters})
+        return render(request, 'Next2U/agencysearch.html', {'supporters':supporters, 'Agency':agencyid})
 
 
 def loginPost(request):
