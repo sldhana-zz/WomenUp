@@ -16,3 +16,5 @@ tests/.coverage
 build/
 tests/report/
 .idea
+*.pyc
+db.sqlite3
