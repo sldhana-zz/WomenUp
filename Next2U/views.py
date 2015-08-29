@@ -91,11 +91,11 @@ def saveService(request):
     import ipdb
     ipdb.set_trace()
 
-    supporter = Supporter.objects.filter(id=request.POST.get('Supporter'))
-    service = Service.objects.filter(ServiceName=request.POST.get('Service'))
+    supporter = Supporter.objects.get(id=request.POST.get('Supporter'))
+    service = Service.objects.get(ServiceName=request.POST.get('Service'))
 
     supporterServiceSaved=SupporterService(
         Service = service,
         Supporter = supporter)
 
-    SupporterService.save()
+    supporterServiceSaved.save()
