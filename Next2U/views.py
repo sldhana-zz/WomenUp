@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.shortcuts import render, render_to_response
 
 from Next2U.models import Agency, Supporter
@@ -41,7 +41,7 @@ def agencyRegistrationPost(request):
         Email = request.POST.get("Email"))
 
     agencySaved.save()
-    return render(request, 'Next2U/agencysearch.html')
+    return HttpResponsePermanentRedirect("/agencySearch")
 
 
 def mentorRegistrationPost(request):
@@ -73,8 +73,7 @@ def loginPost(request):
         agency = Agency.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
         #if (agency is None)
         #alert
-
+        return HttpResponsePermanentRedirect("/agencySearch")
     else:
-        #supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
-        return render(request, 'Next2U/mentorCreation.html')
+        supporter = Supporter.objects.filter(Username=request.POST.get("username") ).filter(Password = request.POST.get("password"))
 
