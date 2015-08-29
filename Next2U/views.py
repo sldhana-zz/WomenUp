@@ -21,6 +21,10 @@ def mentorSuccessDisplay(request):
 def signinDisplay(request):
     return render(request, 'Next2U/signin.html')
 
+def mentorCreationDisplay(request):
+    return render(request, 'Next2U/mentorCreation.html')
+
+
 def agencyRegistrationPost(request):
     agencySaved=Agency(
         Username = request.POST.get("username"),

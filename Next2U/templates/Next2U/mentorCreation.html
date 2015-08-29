@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block title %} We need your skills {% endblock %}
+
+{% block content %}
+    <div class="page-header">
+        <h1>What is your specialty?</h1>
+    </div>
+
+    {% csrf_token %}
+    <div class="container" id="main-container">
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3><a href="">Legal</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <ul class="options">
+                        <li>Divorce</li>
+                        <li>Child custody</li>
+                        <li>Finance</li>
+
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3><a href="">Child care</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <ul class="options">
+                        <li>Offer to care for a child</li>
+                        <li>Help mothers to know their children are cared for</li>
+                        <li>Give a break to tired mothers</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3><a href="">Place to stay</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <ul class="options">
+                        <li>Help an abused woman to recover</li>
+                        <li>Give them a space to regroup</li>
+                        <li>Give them a place to stay</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-success">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h3><a href="">Personal Development</a></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-footer">
+                    <ul class="options">
+                        <li>Help an abused woman get a job</li>
+                        <li>Give them tips on how to be independent</li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+
+    </script>
+
+{% endblock %}
+

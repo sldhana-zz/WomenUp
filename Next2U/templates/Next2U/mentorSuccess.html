@@ -12,16 +12,12 @@
                 </div>
             </div>
         </div>
-        <div class="hide success">
-            <p>We have received your application to be a mentor.  We will get you back to you very soon to schedule a face to face interview.</p>
-        </div>
+
     </div>
 
     <script>
         setTimeout(function(){
-            $(".bg-check").hide('slow', function(){
-                $('.success').removeClass('hide');
-            });
+            window.location.href = '/mentorCreation';
         }, 5000);
 
     </script>

@@ -1,6 +1,11 @@
-#main-container { margin-top: 80px; }
+
 .logo{
-    color: #fff;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar{
+    border-bottom: 1px solid #eee;
 }
 
 .logo-two{
@@ -14,4 +19,30 @@
 
 .panel-footer{
     background: #fff;
+}
+
+.companyName{
+    margin-left: 10px;
+}
+
+.jumbotron{
+    background: #323461;
+}
+
+.jumbotron h1{
+    color: #fff;
+}
+
+.jumbotron p{
+    color: #eee;
+}
+
+.panel-primary>.panel-heading {
+    background: #e01d27;
+
+}
+
+.make-center{
+    margin-left: 100px;
+    margin-bottom: 10px;
 }
