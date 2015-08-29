@@ -88,8 +88,6 @@ def loginPost(request):
 
 def saveService(request):
 
-    import ipdb
-    ipdb.set_trace()
 
     supporter = Supporter.objects.filter(id=request.POST.get('Supporter'))
     service = Service.objects.filter(ServiceName=request.POST.get('Service'))
